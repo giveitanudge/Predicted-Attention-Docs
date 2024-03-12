@@ -7,7 +7,7 @@ This API allows clients to retrieve predicted attention (pAttention) for given U
 
 All API requests require authentication via an API token. Include your API token in the header of each request using the Authorization key.
 
-Example:\
+Example:
 ```
 Authorization: Bearer <YOUR_API_TOKEN>
 ```
