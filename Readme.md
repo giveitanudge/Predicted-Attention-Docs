@@ -38,7 +38,7 @@ Retrieve the attentionScore for a single URL.
 **Example Request:**
 
 ```
-GET /prediction?url=https%3A%2F%2Fwww.example.com
+GET /prediction?url=https://www.example.com/example/
 Authorization: Bearer <YOUR_API_TOKEN>
 ```
 
