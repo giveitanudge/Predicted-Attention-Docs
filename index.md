@@ -130,7 +130,7 @@ The API uses the following status codes:
 - **202 Accepted**: The request has been accepted for processing, but the processing has not been completed.
 - **401 Unauthorized**: Authentication failed, likely due to an invalid API token.
 - **400 Bad Request**: The request was malformed. This could be due to missing parameters or invalid URL formats.
-- **404 Not Found**: The specified request ID was not found.
+- **404 Not Found**: The specified request ID or URL was not found.
 - **500 Internal Server Error**: An error occurred on the server.
 
 ## Error Handling
