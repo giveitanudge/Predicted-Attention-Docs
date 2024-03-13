@@ -1,7 +1,7 @@
 # Predictions API Documentation
 ## Overview
 
-This API allows clients to retrieve predicted attention (pAttention) for given URLs. The Attention score is a predictive measure indicating the potential engagement or interest a URL might generate among a target audience.
+This API allows clients to retrieve predicted attention (attentionScore) for given URLs. The Attention score is a predictive measure indicating the potential engagement or interest a URL might generate among a target audience.
 
 ## Authentication
 
@@ -22,7 +22,7 @@ https://attention.ndg.io/api
 ## Endpoints
 ### GET /prediction
 
-Retrieve the pAttention for a single URL.
+Retrieve the attentionScore for a single URL.
 
 **Request Parameters:**
 
@@ -40,7 +40,7 @@ Authorization: Bearer <YOUR_API_TOKEN>
 ```
 {
   "url": "https://www.example.com",
-  "pAttention": 42
+  "attentionScore": Low
 }
 ```
 
@@ -55,7 +55,7 @@ Authorization: Bearer <YOUR_API_TOKEN>
 
 ### POST /prediction
 
-Submit a list of URLs in bulk, up to a maximum of 100, to retrieve their pAttention asynchronously.
+Submit a list of URLs in bulk, up to a maximum of 100, to retrieve their attentionScore asynchronously.
 
 **Request Body:**
 
@@ -71,8 +71,8 @@ Content-Type: application/json
 
 {
   "urls": [
-    "https://www.example.com",
-    "https://www.anotherexample.com"
+    "https://www.example.com/example-url",
+    "https://www.example.com/another-example-url"
   ]
 }
 ```
@@ -105,12 +105,12 @@ Authorization: Bearer <YOUR_API_TOKEN>
 ```
 [
   {
-    "url": "https://www.example.com",
-    "pAttention": 62
+    "url": "https://www.example.com/example-url",
+    "attentionScore": High
   },
   {
-    "url": "https://www.anotherexample.com",
-    "pAttention": 30
+    "url": "https://www.example.com/another-example-url",
+    "attentionScore": Medium
   }
 ]
 ```
