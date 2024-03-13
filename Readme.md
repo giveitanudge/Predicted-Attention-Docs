@@ -47,7 +47,8 @@ Authorization: Bearer <YOUR_API_TOKEN>
 ```
 {
   "url": "https://www.example.com",
-  "attentionScore": Low
+  "pAttention": "14",
+  "attentionScore": "Low"
 }
 ```
 
@@ -113,11 +114,13 @@ Authorization: Bearer <YOUR_API_TOKEN>
 [
   {
     "url": "https://www.example.com/example-url",
-    "attentionScore": High
+    "pAttention": "52",
+    "attentionScore": "High"
   },
   {
     "url": "https://www.example.com/another-example-url",
-    "attentionScore": Medium
+    "pAttention": "38",
+    "attentionScore": "Medium"
   }
 ]
 ```
