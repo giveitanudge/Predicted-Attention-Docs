@@ -3,6 +3,13 @@
 
 This API allows clients to retrieve predicted attention (attentionScore) for given URLs. The Attention score is a predictive measure indicating the potential engagement or interest a URL might generate among a target audience.
 
+pAttention (Prediction Attention) is returned in the form of an Attention Score for each URL requested. 
+- Low >15
+- Medium 16-30
+- Good 31-48
+- High 49-59
+- Excellent 60+
+
 ## Authentication
 
 All API requests require authentication via an API token. Include your API token in the header of each request using the Authorization key.
