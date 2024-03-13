@@ -20,7 +20,7 @@ https://attention.ndg.io/api
 ```
 
 ## Endpoints
-### GET /url
+### GET /prediction
 
 Retrieve the pAttention for a single URL.
 
@@ -31,11 +31,29 @@ Retrieve the pAttention for a single URL.
 **Example Request:**
 
 ```
-GET /url?url=https%3A%2F%2Fwww.example.com
+GET /prediction?url=https%3A%2F%2Fwww.example.com
 Authorization: Bearer <YOUR_API_TOKEN>
 ```
 
-### POST /urls
+**Example Successful Response:**
+
+```
+{
+  "url": "https://www.example.com",
+  "pAttention": 42
+}
+```
+
+**Example Failed Response:**
+
+```
+{
+  "statusCode":404,"error":"Not Found",
+  "message":"URL not found. URL added to prediction queue, check back in 48 hours for prediction."
+}
+```
+
+### POST /prediction
 
 Submit a list of URLs in bulk, up to a maximum of 100, to retrieve their pAttention asynchronously.
 
@@ -88,11 +106,11 @@ Authorization: Bearer <YOUR_API_TOKEN>
 [
   {
     "url": "https://www.example.com",
-    "attentionScore": 0.92
+    "pAttention": 62
   },
   {
     "url": "https://www.anotherexample.com",
-    "attentionScore": 0.75
+    "pAttention": 30
   }
 ]
 ```
@@ -115,6 +133,7 @@ Errors are returned as JSON objects with a message field describing the error.
 **Example Error Response:**
 ```
 {
+  "statusCode":401,"error":"Unauthorized",
   "message": "Authentication failed. Invalid API token."
 }
 ```
