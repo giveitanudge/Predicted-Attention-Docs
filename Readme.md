@@ -116,39 +116,6 @@ Content-Type: application/json
 ]
 ```
 
-### GET /results
-Retrieve the results of a bulk URL submission using the request ID.
-
-*Please note, results for URLs can take up to 48 hours to generate.*
-
-**Request Parameters:**
-
-`requestId`: The ID of the request for which to retrieve the results.
-
-**Example Request:**
-
-```
-GET /results?requestId=12345abcd
-Authorization: Bearer <YOUR_API_TOKEN>
-```
-
-**Example Response:**
-
-```
-[
-  {
-    "url": "https://www.example.com/example-url",
-    "pAttention": "52",
-    "attentionCategory": "High"
-  },
-  {
-    "url": "https://www.example.com/another-example-url",
-    "pAttention": "38",
-    "attentionCategory": "Medium"
-  }
-]
-```
-
 ## Status Codes
 
 The API uses the following status codes:
