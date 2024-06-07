@@ -69,7 +69,7 @@ Authorization: Bearer <YOUR_API_TOKEN>
 
 ### POST /prediction
 
-Submit a list of URLs in bulk, up to a maximum of 100, to retrieve their attentionCategory asynchronously.
+Submit a list of URLs in bulk, up to a maximum of 100, to retrieve their pAttention, attentionCategory and insights.
 
 **Request Body:**
 
