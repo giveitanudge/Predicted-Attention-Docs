@@ -45,11 +45,17 @@ Authorization: Bearer <YOUR_API_TOKEN>
 **Example Successful Response:**
 
 ```
-{
-  "url": "https://www.example.com/example/",
-  "pAttention": "14",
-  "attentionCategory": "Low"
-}
+[
+    {
+        "url": "https://www.example.com/example-url",
+        "pAttention": "79.0",
+        "attentionCategory": "Excellent",
+        "insights": [
+            "Consider making the content longer.",
+            "Make it easier to read."
+        ]
+    }
+]
 ```
 
 **Example Failed Response:**
@@ -87,9 +93,27 @@ Content-Type: application/json
 
 **Example Response:**
 ```
-{
-  "requestId": "12345abcd"
-}
+[
+    {
+        "url": "https://www.example.com/example-url",
+        "pAttention": "64.0",
+        "attentionCategory": "Excellent",
+        "insights": [
+            "Revisit the tone of the piece, is it engaging?",
+            "Make it easier to read.",
+            "Your content could be more objective."
+        ]
+    },
+    {
+        "https://www.example.com/another-example-url",
+        "pAttention": "79.0",
+        "attentionCategory": "Excellent",
+        "insights": [
+            "Consider making the content longer.",
+            "Make it easier to read."
+        ]
+    }
+]
 ```
 
 ### GET /results
